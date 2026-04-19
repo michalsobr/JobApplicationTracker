@@ -1,0 +1,68 @@
+# =========================
+# Python / Backend
+# =========================
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# =========================
+# FastAPI / Uvicorn
+# =========================
+
+*.pid
+*.sock
+
+# =========================
+# Node / Frontend
+# =========================
+
+node_modules/
+dist/
+build/
+
+# Vite
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS / System files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# Misc
+# =========================
+
+*.swp
+*.swo
