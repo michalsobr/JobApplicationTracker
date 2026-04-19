@@ -10,7 +10,7 @@ This project focuses on clean architecture, structured backend design, and a pol
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/michalsobr/JobApplicationTracker.git
-cd job-application-tracker
+cd JobApplicationTracker
 ```
 
 ### 2. Run Backend
@@ -22,13 +22,10 @@ source .venv/bin/activate  # Mac/Linux
 
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
-
-```bash
 uvicorn app.main:app --reload
 ```
 
-Alternatively (FastAPI CLI):
+Alternatively you can use FastAPI CLI:
 ```bash
 fastapi dev app/main.py
 ```
@@ -54,9 +51,9 @@ http://localhost:5173
 
 ## 💡 Example Usage
 
-- Add a new application with company, role, and location
+- Add new a application with company, role, and location
 - Filter by "Interview" status
-- Select locations: Remote + City
+- Select locations: Remote + London
 - Sort by "Company"
 - Export filtered results to CSV
 
@@ -88,7 +85,7 @@ http://localhost:5173
 - 📄 Pagination (5 / 10 / 20 per page)
 - 📊 Dashboard stats:
   - Total / Active / Closed
-  - Response rate (Interview / Offer)
+  - Response rate (based on Interview and Offer outcomes)
 - ⏰ Deadline tracking:
   - Overdue (red)
   - Upcoming (≤ 7 days)
@@ -140,16 +137,16 @@ JobApplicationTracker/
 
 ---
 
-## 🧠 Architecture
+## 🧠 Architecture
 
 The project follows a clean separation of concerns across backend and frontend:
 
 ### Backend
-**Routes (API layer)** → handle HTTP requests and responses
-**Service layer** → contains application-level logic
-**CRUD layer** → performs direct database operations
-**Schemas (Pydantic)** → validation and data structure
-**Models (SQLAlchemy)** → database representation
+- **Routes (API layer)** → handle HTTP requests and responses
+- **Service layer** → contains application-level logic
+- **CRUD layer** → performs direct database operations
+- **Schemas (Pydantic)** → validation and data structure
+- **Models (SQLAlchemy)** → database representation
 
 This ensures:
 - Clear responsibility boundaries
