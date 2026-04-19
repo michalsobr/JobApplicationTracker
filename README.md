@@ -24,7 +24,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Alternatively you can use FastAPI CLI:
+Alternatively, you can use the FastAPI CLI:
 ```bash
 fastapi dev app/main.py
 ```
@@ -50,7 +50,7 @@ http://localhost:5173
 
 ## 💡 Example Usage
 
-- Add new a application with company, role, and location
+- Add a new application with company, role, and location
 - Filter by "Interview" status
 - Select locations: Remote + London
 - Sort by "Company"
