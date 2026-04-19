@@ -20,9 +20,17 @@ python -m venv .venv
 source .venv/bin/activate  # Mac/Linux
 # .venv\Scripts\activate   # Windows
 
+python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
 
+```bash
 uvicorn app.main:app --reload
+```
+
+Alternatively (FastAPI CLI):
+```bash
+fastapi dev app/main.py
 ```
 
 Backend runs at:
