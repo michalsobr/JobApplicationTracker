@@ -15,7 +15,6 @@ cd JobApplicationTracker
 
 ### 2. Run Backend
 ```bash
-cd backend
 python -m venv .venv
 source .venv/bin/activate  # Mac/Linux
 # .venv\Scripts\activate   # Windows
@@ -116,23 +115,22 @@ http://localhost:5173
 ```text
 JobApplicationTracker/
 │
-├── backend/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── routes/         # API endpoints
-│   │   ├── core/               # Database configuration
-│   │   ├── crud/               # Database operations
-│   │   ├── models/             # SQLAlchemy models
-│   │   ├── schemas/            # Pydantic validation schemas
-│   │   └── services/           # Business logic layer
-│   │
+├── app/
+│   ├── api/
+│   │   └── routes/             # API endpoints
+│   ├── core/                   # Database configuration
+│   ├── crud/                   # Database operations
+│   ├── models/                 # SQLAlchemy models
+│   ├── schemas/                # Pydantic validation schemas
+│   ├── services/               # Business logic layer
 │   └── main.py                 # FastAPI entry point
 │
 ├── frontend/
 │   └── src/
 │       └── App.jsx             # Main React application (single-page UI)
 │
-└── job_applications.db         # SQLite database (auto-generated)
+├── .venv/                      # Virtual environment (ignored by Git)
+└── job_applications.db         # SQLite database (auto-generated, ignored by Git)
 ```
 
 ---
